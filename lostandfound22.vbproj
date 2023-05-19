@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C28429D8-9EE3-4F90-88FD-DDB3F1D6803B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>lostandfound22.My.MyApplication</StartupObject>
+    <RootNamespace>lostandfound22</RootNamespace>
+    <AssemblyName>lostandfound22</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>lostandfound22.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>lostandfound22.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\mysql-for-visualstudio-2.0.5-noinstall\v461\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRUDEvents.Designer.vb">
+      <DependentUpon>CRUDEvents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDEvents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardPOD.Designer.vb">
+      <DependentUpon>DashboardPOD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardPOD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeanListofEvents.Designer.vb">
+      <DependentUpon>DeanListofEvents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeanListofEvents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lostitemsPOD.Designer.vb">
+      <DependentUpon>lostitemsPOD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lostitemsPOD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationDean.Designer.vb">
+      <DependentUpon>NotificationDean.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationDean.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationsPOD.Designer.vb">
+      <DependentUpon>NotificationsPOD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationsPOD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationStudent.Designer.vb">
+      <DependentUpon>NotificationStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificationTeachers.Designer.vb">
+      <DependentUpon>NotificationTeachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationTeachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PODevents.Designer.vb">
+      <DependentUpon>PODevents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PODevents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInDean.Designer.vb">
+      <DependentUpon>SignInDean.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignInDean.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lostandFoundSystem.Designer.vb">
+      <DependentUpon>lostandFoundSystem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lostandFoundSystem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MY_CONNECTION.Designer.vb">
+      <DependentUpon>MY_CONNECTION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MY_CONNECTION.vb" />
+    <Compile Include="SigninStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SigninStudent.Designer.vb">
+      <DependentUpon>SigninStudent.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventListTeachers.Designer.vb">
+      <DependentUpon>EventListTeachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventListTeachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInTeachers.Designer.vb">
+      <DependentUpon>SignInTeachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignInTeachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpDean.Designer.vb">
+      <DependentUpon>SignUpDean.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpDean.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInPOD.Designer.vb">
+      <DependentUpon>SignInPOD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignInPOD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpTeachers.Designer.vb">
+      <DependentUpon>SignUpTeachers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpTeachers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAddmissingitem.Designer.vb">
+      <DependentUpon>StudentAddmissingitem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAddmissingitem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDashboard.Designer.vb">
+      <DependentUpon>StudentDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentevents.Designer.vb">
+      <DependentUpon>studentevents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="studentevents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Studentlatestitems.Designer.vb">
+      <DependentUpon>Studentlatestitems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Studentlatestitems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpStudent.Designer.vb">
+      <DependentUpon>SignUpStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeanDashboard.Designer.vb">
+      <DependentUpon>DeanDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeanDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherCreateLetter.Designer.vb">
+      <DependentUpon>TeacherCreateLetter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherCreateLetter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherDashboard.Designer.vb">
+      <DependentUpon>TeacherDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="eventmaker.Designer.vb">
+      <DependentUpon>eventmaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="eventmaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="viewLetterDean.Designer.vb">
+      <DependentUpon>viewLetterDean.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewLetterDean.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CRUDEvents.resx">
+      <DependentUpon>CRUDEvents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardPOD.resx">
+      <DependentUpon>DashboardPOD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeanListofEvents.resx">
+      <DependentUpon>DeanListofEvents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lostitemsPOD.resx">
+      <DependentUpon>lostitemsPOD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationDean.resx">
+      <DependentUpon>NotificationDean.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationsPOD.resx">
+      <DependentUpon>NotificationsPOD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationStudent.resx">
+      <DependentUpon>NotificationStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificationTeachers.resx">
+      <DependentUpon>NotificationTeachers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PODevents.resx">
+      <DependentUpon>PODevents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInDean.resx">
+      <DependentUpon>SignInDean.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lostandFoundSystem.resx">
+      <DependentUpon>lostandFoundSystem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SigninStudent.resx">
+      <DependentUpon>SigninStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventListTeachers.resx">
+      <DependentUpon>EventListTeachers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInTeachers.resx">
+      <DependentUpon>SignInTeachers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpDean.resx">
+      <DependentUpon>SignUpDean.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInPOD.resx">
+      <DependentUpon>SignInPOD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpTeachers.resx">
+      <DependentUpon>SignUpTeachers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAddmissingitem.resx">
+      <DependentUpon>StudentAddmissingitem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentDashboard.resx">
+      <DependentUpon>StudentDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentevents.resx">
+      <DependentUpon>studentevents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Studentlatestitems.resx">
+      <DependentUpon>Studentlatestitems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpStudent.resx">
+      <DependentUpon>SignUpStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeanDashboard.resx">
+      <DependentUpon>DeanDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherCreateLetter.resx">
+      <DependentUpon>TeacherCreateLetter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherDashboard.resx">
+      <DependentUpon>TeacherDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="eventmaker.resx">
+      <DependentUpon>eventmaker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewLetterDean.resx">
+      <DependentUpon>viewLetterDean.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lost-and-found-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reply-arrow-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
